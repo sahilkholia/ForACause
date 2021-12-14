@@ -1,0 +1,59 @@
+.menu {
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: rgb(56, 56, 56);
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  max-height: 5vh;
+  width: auto;
+  margin-left: 1rem;
+}
+.user {
+  width: fit-content;
+  height: fit-content;
+  margin-right: 1rem;
+}
+
+.dashboardBody {
+  top: 0;
+  width: 100%;
+}
+
+.myPetitions {
+  position: relative;
+  width: 80%;
+  min-height: 20rem;
+  background-color: rgb(255, 255, 255);
+  margin-left: 10%;
+  top: 10rem;
+  border: rgb(44, 41, 41);
+  border-style: ridge;
+  padding-top: 3%;
+  border-radius: 3rem;
+}
+
+.borderHeading {
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+  margin: 0%;
+  font-size: x-large;
+  font-family: cursive;
+  position: absolute;
+  left: 2rem;
+  top: -1rem;
+  z-index: 1;
+}
+
+.addPetition {
+  width: fit-content;
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
