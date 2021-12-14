@@ -1,48 +1,23 @@
 import {React,useState} from 'react'
-import '../css/dashboard.css';
-
-import Petition from './Petition';
+import '../css/vote.css'
 import logo from '../images/logopng.png';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Add from './Add';
+import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 
-
-
-
-const data=[
-    {
+function Vote() {
+    const data = {
         "text":"Legalize Mary Jane. She's a blessing from heaven",
         "count":"50000000",
         "id":"1"
-    },
-    {
-        "text":"Ban Tobacco. Big amount of tax is not above human life.",
-        "count":"600000",
-        "id":"2"
-    },
-    {
-        "text":"Let's cancel summer this year.",
-        "count":"90000",
-        "id":"3"
-    },
-]
-
-const creds = {
-    "name":"Sahil Kholia"
-}
+    }
 
 
-function Dashboard() {
-
+    const creds = {
+        "name":"Sahil Kholia"
+    }
 
     //avatar
     const [anchorEl, setAnchorEl] = useState(null);
@@ -53,12 +28,8 @@ function Dashboard() {
     const handleClose = () => {
       setAnchorEl(null);
     };
-
-   
-
     return (
-        <div className='dashboard'>
-            {/* menu  */}
+        <div className='voteDashboard'>
             <div className='menu'>
                 <img className='logo' src={logo} alt='Logo' />
                 <div className='user'>
@@ -85,32 +56,28 @@ function Dashboard() {
                     </Menu>
                 </div>
             </div>
-            
-            
-            {/* body */}
-            <div className='dashboardBody'>
-                {/* My Petitions  */}
-                <div className='myPetitions'>
-                    <div className='borderHeading'>
-                        My Petitions
+
+
+            <div className='voteBody'>
+                <div className='votePanel'>
+                    <div className='text'>
+                        <label className='textContent'>{data.text}</label>
                     </div>
-                    {/* petition  */}
-                    
-                    {data.map((entry)=>
-                    <Petition key={entry.id} entry={entry}/>
-                    )}
- 
-                </div>
-                {/* add  */}
-                <div className='addPetition'>
-                   <Add />
-                  
+                    <div className='options'>
+                        <div className='vote'>
+                            
+                        </div>
+                        <div className="share">
+
+                        </div>
+                    </div>
+                    <div className='count'>
+                        {data.count}
+                    </div>
                 </div>
             </div>
-            
-                
-        </div> 
+        </div>
     )
 }
 
-export default Dashboard
+export default Vote

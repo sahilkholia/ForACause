@@ -25,7 +25,9 @@ function Login() {
             <div className='body'>
                 {/* toggel */}
                 <div className='toggle'>
+                    <label className='name'>ForACause</label>
                     <div className='togglebuttons'>
+                        
                         <ButtonGroup variant='text' aria-label="text button group">
                             <Button color={loginform?"success":"primary"} onClick={() =>setLoginform(true)} >Login</Button>
                             <Button color={loginform?"primary":"success"} onClick={() =>setLoginform(false)}>Signup</Button>

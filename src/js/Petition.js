@@ -5,6 +5,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import ShareIcon from '@mui/icons-material/Share';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import { grey } from '@mui/material/colors';
+import Tooltip from '@mui/material/Tooltip';
 
 function Petition(props) {
     return (
@@ -16,14 +17,18 @@ function Petition(props) {
             <div className='right'>
                 <div className='options'>
                     <div className='delete'>
-                    <IconButton aria-label="delete" size="large">
-                        <DeleteIcon fontSize="large" sx={{color: grey[900]}} />
-                    </IconButton>
+                        <Tooltip title="Delete" placement='top'>
+                            <IconButton aria-label="delete" size="large">
+                                <DeleteIcon fontSize="large" sx={{color: grey[900]}} />
+                            </IconButton>
+                        </Tooltip>
                     </div>
                     <div className='share'>
-                    <IconButton aria-label="delete" size="large">
-                        <ShareIcon fontSize="large" sx={{color: grey[900]}}  />
-                    </IconButton>
+                        <Tooltip title="Share" placement='top'>
+                            <IconButton aria-label="share" size="large">
+                                <ShareIcon fontSize="large" sx={{color: grey[900]}}  />
+                            </IconButton>
+                        </Tooltip>
                     </div>
                 </div>
                 <div className='count'>

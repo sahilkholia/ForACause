@@ -24,7 +24,6 @@
   display: block;
   height: 70vh;
   width: 70%;
-  background-color: black;
   top: 5rem;
   left: 15vw;
 }
@@ -38,7 +37,16 @@
   height: 7vh;
   background-color: rgb(56, 56, 56);
   align-items: center;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
+.name {
+  margin-left: 2rem;
+  font-family: "Fuzzy Bubbles", cursive;
+  font-size: larger;
+  color: rgb(207, 205, 205);
+}
+
 .togglebuttons {
   width: max-content;
   position: absolute;
