@@ -33,46 +33,63 @@
 
 .votePanel {
   width: 80%;
-  background-color: thistle;
   margin: 10%;
-  height: 30rem;
+  margin-top: 12rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   padding: 0;
   justify-content: space-evenly;
+  background-color: rgb(216, 216, 216);
+  border-radius: 3rem;
 }
 
 .text {
   width: 100%;
   flex: 3;
-  background-color: tomato;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
 }
 .textContent {
   position: relative;
-  background-color: white;
-  top: 5rem;
+  top: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 5vh;
 }
 
 .options {
   width: 100%;
   flex: 2;
-  background-color: turquoise;
   display: flex;
 }
 
 .vote {
   flex: 1;
-  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .share {
   flex: 1;
-  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .count {
   flex: 1;
   width: 100%;
   margin: 0%;
-  background-color: violet;
+  align-items: center;
+  justify-content: center;
+}
+
+.countText {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 4vh;
 }

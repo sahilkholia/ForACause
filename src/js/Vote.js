@@ -6,6 +6,11 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import ShareIcon from '@mui/icons-material/Share';
+import IconButton from '@mui/material/IconButton';
+import { grey } from '@mui/material/colors';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+import Divider from '@mui/material/Divider';
 
 function Vote() {
     const data = {
@@ -63,16 +68,28 @@ function Vote() {
                     <div className='text'>
                         <label className='textContent'>{data.text}</label>
                     </div>
+                    <Divider variant='middle' />
                     <div className='options'>
                         <div className='vote'>
+                            <IconButton aria-label="vote" size="large">
+                                <ThumbUpAltRoundedIcon fontSize='large' sx={{color: grey[900]}}/>
+                                <label>Vote</label>
+                            </IconButton>
                             
                         </div>
+                        <Divider orientation='vertical' flexItem />
                         <div className="share">
-
+                            <IconButton aria-label="share" size="large">
+                                <ShareIcon fontSize='large' sx={{color: grey[900]}}/>
+                                <label> Share</label>
+                            </IconButton>
+                            
                         </div>
                     </div>
+                    <Divider variant='middle' />
                     <div className='count'>
-                        {data.count}
+                        <ArrowCircleUpIcon fontSize='large'/>
+                        <label className='countText'>{data.count}</label>
                     </div>
                 </div>
             </div>

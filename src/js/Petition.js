@@ -11,7 +11,7 @@ function Petition(props) {
     return (
         <div className='petition'>
             {console.log(props.entry.count)}
-            <div className='text'>
+            <div className='petitiontext'>
                 <label>{props.entry.text}</label>
             </div>
             <div className='right'>

@@ -8,10 +8,10 @@
   align-items: center;
 }
 
-.text {
+.petitiontext {
   width: 80%;
   font-family: "Times New Roman", Times, serif;
-  font-size: 2vw;
+  font-size: 4vh;
 }
 
 .right {
