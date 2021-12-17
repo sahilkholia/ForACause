@@ -1,4 +1,4 @@
-import {React,useState} from 'react'
+import {React,useState, useEffect} from 'react'
 import '../css/dashboard.css';
 
 import Petition from './Petition';
@@ -14,6 +14,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Add from './Add';
+import { Redirect, Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 
 
@@ -41,8 +42,16 @@ const creds = {
 }
 
 
-function Dashboard() {
+function Dashboard(props) {
 
+    //tokencheck
+    const token = localStorage.getItem("token");
+    let loggedIn = true;
+
+    if(token == null)
+    {
+        loggedIn=false;
+    }
 
     //avatar
     const [anchorEl, setAnchorEl] = useState(null);
@@ -54,7 +63,15 @@ function Dashboard() {
       setAnchorEl(null);
     };
 
+
+    
+    
+
    
+    if(loggedIn===false)
+    {
+        return <Redirect to="/" />
+    }
 
     return (
         <div className='dashboard'>
@@ -81,7 +98,9 @@ function Dashboard() {
                         }}
                     >
                         <MenuItem onClick={handleClose}>{creds.name}</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <Link to="/logout">
+                            <MenuItem >Logout</MenuItem>
+                        </Link>
                     </Menu>
                 </div>
             </div>

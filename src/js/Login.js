@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/login.css'
-import LoginForm from './loginForm';
-import SignupForm from './signupForm';
+import LoginForm from './LoginForm';
+import SignupForm from './SignupForm';
 import logo from '../images/logopng.png';
 
 import {useState} from 'react';

@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Dashboard from './js/Dashboard'; 
 import Login from './js/Login';
 import Vote from './js/Vote';
+import Logout from './js/Logout';
 
 
 function App() {
@@ -14,11 +15,14 @@ function App() {
           <Route exact path="/" >
             <Login />
           </Route>
-          <Route path="/dashboard" >
+          <Route exact path="/dashboard" >
             <Dashboard />
           </Route>
-          <Route path="/vote" >
+          <Route exact path="/vote" >
             <Vote />
+          </Route>
+          <Route exact path="/logout" >
+            <Logout />
           </Route>
         </Switch>
       </div>

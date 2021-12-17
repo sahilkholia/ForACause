@@ -11,8 +11,20 @@ import IconButton from '@mui/material/IconButton';
 import { grey } from '@mui/material/colors';
 import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 import Divider from '@mui/material/Divider';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Vote() {
+
+    //tokencheck
+    const token = localStorage.getItem("token");
+    let loggedIn = true;
+
+    if(token == null)
+    {
+        loggedIn=false;
+    }
+
+
     const data = {
         "text":"Legalize Mary Jane. She's a blessing from heaven",
         "count":"50000000",
@@ -33,6 +45,13 @@ function Vote() {
     const handleClose = () => {
       setAnchorEl(null);
     };
+
+
+    if(loggedIn===false)
+    {
+        return <Redirect to="/" />
+    }
+
     return (
         <div className='voteDashboard'>
             <div className='menu'>
