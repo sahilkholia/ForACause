@@ -10,9 +10,10 @@ import Tooltip from '@mui/material/Tooltip';
 function Petition(props) {
     return (
         <div className='petition'>
-            {console.log(props.entry.count)}
+            {console.log("entered")}
+            {console.log(props.pid)}
             <div className='petitiontext'>
-                <label>{props.entry.text}</label>
+                <label>{props.post}</label>
             </div>
             <div className='right'>
                 <div className='options'>
@@ -33,7 +34,7 @@ function Petition(props) {
                 </div>
                 <div className='count'>
                     <ArrowCircleUpIcon />
-                    <label>{props.entry.count}</label>
+                    <label>{props.ctr}</label>
                 </div>
             </div>
         </div>

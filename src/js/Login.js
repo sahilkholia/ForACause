@@ -4,6 +4,7 @@ import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 import logo from '../images/logopng.png';
 
+import {Redirect} from 'react-router-dom';
 import {useState} from 'react';
 import { Button, ButtonGroup } from '@mui/material'
 
@@ -14,7 +15,11 @@ import { Button, ButtonGroup } from '@mui/material'
 
 function Login() {
     const [loginform,setLoginform] = useState(true);
-
+    if(localStorage.getItem("token")!=null)
+    {
+        return <Redirect to="/dashboard" />
+    }
+    else
     return (
         <div className='main'>
             {/* menu */}

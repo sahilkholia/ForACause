@@ -3,6 +3,7 @@ import React from 'react'
 function Logout() {
 
     localStorage.removeItem("token");
+    localStorage.removeItem("email");
 
     return (
         <div>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, TextField } from '@mui/material'
 import '../css/signupForm.css'
-import Axios from 'axios';
 import {useState, useEffect} from 'react'
 import axios from 'axios';
 
@@ -67,7 +66,7 @@ function SignupForm() {
             errors.push("your password does not match");
         }
 
-        return false;
+        
     }
 
     function signup(){
